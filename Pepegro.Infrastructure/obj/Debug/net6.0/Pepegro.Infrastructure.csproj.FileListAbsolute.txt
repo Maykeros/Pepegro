@@ -1,0 +1,17 @@
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/bin/Debug/net6.0/Pepegro.Infrastructure.deps.json
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/bin/Debug/net6.0/Pepegro.Infrastructure.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/bin/Debug/net6.0/Pepegro.Infrastructure.pdb
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/bin/Debug/net6.0/Pepegro.Domain.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/bin/Debug/net6.0/Pepegro.Domain.pdb
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/Pepegro.Infrastructure.csproj.AssemblyReference.cache
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/Pepegro.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/Pepegro.Infrastructure.AssemblyInfoInputs.cache
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/Pepegro.Infrastructure.AssemblyInfo.cs
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/Pepegro.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/Pepegro.Infrastructure.csproj.CopyComplete
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/Pepegro.Infrastructure.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/refint/Pepegro.Infrastructure.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/Pepegro.Infrastructure.pdb
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/ref/Pepegro.Infrastructure.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/bin/Debug/net6.0/Pepegro.Infrastructure.runtimeconfig.json
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/obj/Debug/net6.0/Pepegro.Infrastructure.genruntimeconfig.cache

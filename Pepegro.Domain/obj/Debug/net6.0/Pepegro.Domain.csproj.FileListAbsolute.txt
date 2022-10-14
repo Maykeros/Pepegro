@@ -1,0 +1,14 @@
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/bin/Debug/net6.0/Pepegro.Domain.deps.json
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/bin/Debug/net6.0/Pepegro.Domain.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/bin/Debug/net6.0/Pepegro.Domain.pdb
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.csproj.AssemblyReference.cache
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.AssemblyInfoInputs.cache
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.AssemblyInfo.cs
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.csproj.CoreCompileInputs.cache
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/refint/Pepegro.Domain.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.pdb
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/ref/Pepegro.Domain.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/bin/Debug/net6.0/Pepegro.Domain.runtimeconfig.json
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.genruntimeconfig.cache

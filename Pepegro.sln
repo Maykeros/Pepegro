@@ -1,12 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pepegro.Api", "Pepegro.Api\Pepegro.Api.csproj", "{0F93BC33-F435-40D0-B513-D92673B31801}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pepegro.Domain", "Pepegro.Domain\Pepegro.Domain.csproj", "{B32FE274-0E26-44AC-ACAA-04B01722B8B0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pepegro.Services", "Pepegro.Services\Pepegro.Services.csproj", "{1ECCB000-BF29-4100-9704-E0B4D77E2806}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pepegro.Infrastructure", "Pepegro.Infrastructure\Pepegro.Infrastructure.csproj", "{B5837532-D66E-4532-AA3D-16663C49515F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pepegro.Api", "Pepegro.Api\Pepegro.Api.csproj", "{E3094D80-31DD-4F5A-BA44-262FF3B7D92F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,10 +14,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0F93BC33-F435-40D0-B513-D92673B31801}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F93BC33-F435-40D0-B513-D92673B31801}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F93BC33-F435-40D0-B513-D92673B31801}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F93BC33-F435-40D0-B513-D92673B31801}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B32FE274-0E26-44AC-ACAA-04B01722B8B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B32FE274-0E26-44AC-ACAA-04B01722B8B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B32FE274-0E26-44AC-ACAA-04B01722B8B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -30,5 +26,9 @@ Global
 		{B5837532-D66E-4532-AA3D-16663C49515F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5837532-D66E-4532-AA3D-16663C49515F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5837532-D66E-4532-AA3D-16663C49515F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3094D80-31DD-4F5A-BA44-262FF3B7D92F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3094D80-31DD-4F5A-BA44-262FF3B7D92F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3094D80-31DD-4F5A-BA44-262FF3B7D92F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3094D80-31DD-4F5A-BA44-262FF3B7D92F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
