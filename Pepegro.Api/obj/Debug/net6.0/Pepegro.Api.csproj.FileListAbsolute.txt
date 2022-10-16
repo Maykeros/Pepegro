@@ -69,3 +69,16 @@
 /Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/obj/Debug/net6.0/ref/Pepegro.Api.dll
 /Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Humanizer.dll
 /Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Microsoft.Extensions.DependencyModel.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.AspNetCore.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Expressions.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Extensions.Hosting.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Extensions.Logging.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Formatting.Compact.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Settings.Configuration.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Sinks.Console.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Sinks.Debug.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Sinks.File.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Sinks.PeriodicBatching.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Sinks.Seq.dll
