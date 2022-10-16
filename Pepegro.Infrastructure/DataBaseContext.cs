@@ -1,5 +1,6 @@
 namespace Infrastructure;
 
+using Authentication;
 using Domain.Entities.Authorization;
 using Domain.Entities.MainEntities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;

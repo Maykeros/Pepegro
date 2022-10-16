@@ -1,4 +1,4 @@
-namespace Infrastructure;
+namespace Infrastructure.Authentication;
 
 using Domain.Entities.Authorization;
 using Microsoft.EntityFrameworkCore;
