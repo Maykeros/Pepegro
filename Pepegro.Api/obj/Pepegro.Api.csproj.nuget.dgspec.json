@@ -28,6 +28,9 @@
             "projectReferences": {
               "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/Pepegro.Infrastructure.csproj": {
                 "projectPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/Pepegro.Infrastructure.csproj"
+              },
+              "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Services/Pepegro.Services.csproj": {
+                "projectPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Services/Pepegro.Services.csproj"
               }
             }
           }
@@ -42,6 +45,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[6.0.10, )"
@@ -250,6 +257,72 @@
             "Serilog.Sinks.Seq": {
               "target": "Package",
               "version": "[5.2.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Services/Pepegro.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Services/Pepegro.Services.csproj",
+        "projectName": "Pepegro.Services",
+        "projectPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Services/Pepegro.Services.csproj",
+        "packagesPath": "/Users/turchynovychnazarii/.nuget/packages/",
+        "outputPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Services/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/turchynovychnazarii/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/Pepegro.Domain.csproj": {
+                "projectPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/Pepegro.Domain.csproj"
+              },
+              "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/Pepegro.Infrastructure.csproj": {
+                "projectPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Infrastructure/Pepegro.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.0, )"
             }
           },
           "imports": [

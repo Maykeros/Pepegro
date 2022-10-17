@@ -82,3 +82,8 @@
 /Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Sinks.File.dll
 /Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Sinks.PeriodicBatching.dll
 /Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Serilog.Sinks.Seq.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/AutoMapper.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Pepegro.Services.dll
+/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Api/bin/Debug/net6.0/Pepegro.Services.pdb

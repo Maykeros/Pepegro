@@ -55,21 +55,21 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "1e418069-61ea-4e35-be16-2c7693709100",
+                            ConcurrencyStamp = "ad169ee8-135a-420d-b2eb-358545f2e339",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "e2c2536a-b222-4b3f-ab30-f59e0f6f974d",
+                            ConcurrencyStamp = "4f5155e2-a15a-4d94-9276-4068c5a2dd78",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = 3,
-                            ConcurrencyStamp = "061e6fb2-7830-485a-9422-b0c02726fe42",
+                            ConcurrencyStamp = "bfa24c36-17c0-4279-9124-9b548d82cb41",
                             Name = "Seller",
                             NormalizedName = "SELLER"
                         });
@@ -91,7 +91,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
@@ -160,6 +159,9 @@ namespace Infrastructure.Migrations
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
                     b.HasKey("ProductId", "UserId");
 
                     b.HasIndex("UserId");
@@ -182,38 +184,14 @@ namespace Infrastructure.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<int>("SellerId")
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("SellerId");
+                    b.HasIndex("UserId");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("Domain.Entities.MainEntities.Seller", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("ProductAmount")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Sellers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -340,13 +318,13 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.MainEntities.Product", b =>
                 {
-                    b.HasOne("Domain.Entities.MainEntities.Seller", "Seller")
+                    b.HasOne("Domain.Entities.Authorization.User", "User")
                         .WithMany("Products")
-                        .HasForeignKey("SellerId")
+                        .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Seller");
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -403,16 +381,13 @@ namespace Infrastructure.Migrations
             modelBuilder.Entity("Domain.Entities.Authorization.User", b =>
                 {
                     b.Navigation("Orders");
+
+                    b.Navigation("Products");
                 });
 
             modelBuilder.Entity("Domain.Entities.MainEntities.Product", b =>
                 {
                     b.Navigation("Orders");
-                });
-
-            modelBuilder.Entity("Domain.Entities.MainEntities.Seller", b =>
-                {
-                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

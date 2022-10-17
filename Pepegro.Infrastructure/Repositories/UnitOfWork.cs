@@ -10,8 +10,7 @@ public class UnitOfWork : IUnitOfWork
 
     private IGenericReposotory<Order> _orders;
     private IGenericReposotory<Product> _products;
-    private IGenericReposotory<Seller> _sellers;
-    
+
     public UnitOfWork(DataBaseContext ctx, GenericRepository<Order> or)
     {
         _ctx = ctx;
@@ -20,8 +19,7 @@ public class UnitOfWork : IUnitOfWork
     public IGenericReposotory<Order> Orders => _orders ??= new GenericRepository<Order>(_ctx);
 
     public IGenericReposotory<Product> Products => _products ??= new GenericRepository<Product>(_ctx);
-
-    public IGenericReposotory<Seller> Sellers => _sellers ??= new GenericRepository<Seller>(_ctx);
+    
     
     public async void Save()
     {

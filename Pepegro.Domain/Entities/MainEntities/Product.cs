@@ -1,5 +1,7 @@
 namespace Domain.Entities.MainEntities;
 
+using Authorization;
+
 public class Product
 {
     public int Id { get; set; }
@@ -8,9 +10,9 @@ public class Product
 
     public int Price { get; set; }
 
-    public int SellerId { get; set; }
+    public int UserId { get; set; }
 
-    public Seller Seller { get; set; }
+    public User User { get; set; }
 
     public List<Order> Orders { get; set; }
 }

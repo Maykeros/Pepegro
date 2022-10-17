@@ -13,8 +13,7 @@ public class DataBaseContext : IdentityDbContext<User, Role, int>
     }
 
     public DbSet<Product> Products { get; set; }
-
-    public DbSet<Seller> Sellers { get; set; }
+    
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

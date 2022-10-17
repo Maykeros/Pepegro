@@ -7,7 +7,6 @@ public interface IUnitOfWork : IDisposable
 {
     public IGenericReposotory<Order> Orders { get; }
     public IGenericReposotory<Product> Products { get; }
-    public IGenericReposotory<Seller> Sellers { get; }
 
     void Save();
 }

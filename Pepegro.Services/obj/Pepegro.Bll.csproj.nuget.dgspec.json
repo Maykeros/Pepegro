@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/turchynovychnazarii/RiderProjects/Pepegro/Services/Services.csproj": {}
+    "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Bll/Pepegro.Bll.csproj": {}
   },
   "projects": {
-    "/Users/turchynovychnazarii/RiderProjects/Pepegro/Services/Services.csproj": {
+    "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Bll/Pepegro.Bll.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Services/Services.csproj",
-        "projectName": "Services",
-        "projectPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Services/Services.csproj",
+        "projectUniqueName": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Bll/Pepegro.Bll.csproj",
+        "projectName": "Pepegro.Bll",
+        "projectPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Bll/Pepegro.Bll.csproj",
         "packagesPath": "/Users/turchynovychnazarii/.nuget/packages/",
-        "outputPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Services/obj/",
+        "outputPath": "/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Bll/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/turchynovychnazarii/.nuget/NuGet/NuGet.Config"

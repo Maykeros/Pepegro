@@ -1,4 +1,5 @@
 using System.Text;
+using Domain.DTO_s;
 using Domain.Entities.Authorization;
 using Infrastructure;
 using Infrastructure.Abstractions.Authentication;
@@ -11,6 +12,7 @@ using Pepegro.Api.Extensions;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
+using Services.Services.Authentication;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.File(
@@ -35,6 +37,8 @@ try
         .AddJwtTokenGenerator(builder.Configuration)
         .AddJwtBearerOptions(builder.Configuration);
 
+    builder.Services.AddScoped<IAccountService, AccountService>();
+    
     builder.Services
         .AddIdentity<User, Role>(options => options.PasswordSettings())
         .AddUserManager<UserManager<User>>()
@@ -44,6 +48,7 @@ try
     builder.Services.AddDbContext<DataBaseContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+    builder.Services.AddAutoMapper(typeof(Program));
 
     var app = builder.Build();
 

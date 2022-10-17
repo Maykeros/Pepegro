@@ -4,17 +4,16 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <RootNamespace>Services</RootNamespace>
+        <RootNamespace>Pepegro.Bll</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.10">
-        <PrivateAssets>all</PrivateAssets>
-        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-      </PackageReference>
-      <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
-      <PackageReference Include="Serilog.Expressions" Version="3.4.1" />
-      <PackageReference Include="Serilog.Sinks.Seq" Version="5.2.1" />
+      <ProjectReference Include="..\Pepegro.Domain\Pepegro.Domain.csproj" />
+      <ProjectReference Include="..\Pepegro.Infrastructure\Pepegro.Infrastructure.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="12.0.0" />
     </ItemGroup>
 
 </Project>
