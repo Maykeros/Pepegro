@@ -1,14 +1,19 @@
 using System.Text;
 using Domain.DTO_s;
 using Domain.Entities.Authorization;
+using Domain.Entities.MainEntities;
 using Infrastructure;
+using Infrastructure.Abstractions;
 using Infrastructure.Abstractions.Authentication;
+using Infrastructure.Abstractions.Repositories;
 using Infrastructure.Authentication;
+using Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Pepegro.Api.Extensions;
+using Pepegro.Bll.Services.MainServices;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
@@ -32,11 +37,15 @@ try
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
-
+    
+    builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+    
+    builder.Services.AddDbContext<DataBaseContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    
     builder.Services
         .AddJwtTokenGenerator(builder.Configuration)
         .AddJwtBearerOptions(builder.Configuration);
-
     builder.Services.AddScoped<IAccountService, AccountService>();
     
     builder.Services
@@ -45,8 +54,6 @@ try
         .AddEntityFrameworkStores<DataBaseContext>()
         .AddDefaultTokenProviders();
     
-    builder.Services.AddDbContext<DataBaseContext>(options =>
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
     builder.Services.AddAutoMapper(typeof(Program));
 
@@ -57,7 +64,7 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
-
+    
     app.UseHttpsRedirection();
     
     app.UseAuthentication();

@@ -55,21 +55,21 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "ad169ee8-135a-420d-b2eb-358545f2e339",
+                            ConcurrencyStamp = "b94ac46a-044e-4289-90c1-a4de2230405b",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "4f5155e2-a15a-4d94-9276-4068c5a2dd78",
+                            ConcurrencyStamp = "b778fa54-4637-47fa-a22f-77ae1964efaf",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = 3,
-                            ConcurrencyStamp = "bfa24c36-17c0-4279-9124-9b548d82cb41",
+                            ConcurrencyStamp = "533e61b8-866f-4dca-966b-ddc6a3e03b0b",
                             Name = "Seller",
                             NormalizedName = "SELLER"
                         });

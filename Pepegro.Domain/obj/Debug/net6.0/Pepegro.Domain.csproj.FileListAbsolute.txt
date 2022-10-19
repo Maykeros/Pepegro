@@ -10,5 +10,3 @@
 /Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/refint/Pepegro.Domain.dll
 /Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.pdb
 /Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/ref/Pepegro.Domain.dll
-/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/bin/Debug/net6.0/Pepegro.Domain.runtimeconfig.json
-/Users/turchynovychnazarii/RiderProjects/Pepegro/Pepegro.Domain/obj/Debug/net6.0/Pepegro.Domain.genruntimeconfig.cache

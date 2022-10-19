@@ -151,12 +151,6 @@
               "target": "Package",
               "version": "[6.0.10, )"
             },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.10, )"
-            },
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[6.0.1, )"
@@ -233,6 +227,12 @@
               "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.10, )"
             },

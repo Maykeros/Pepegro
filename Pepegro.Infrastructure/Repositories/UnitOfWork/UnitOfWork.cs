@@ -11,7 +11,7 @@ public class UnitOfWork : IUnitOfWork
     private IGenericReposotory<Order> _orders;
     private IGenericReposotory<Product> _products;
 
-    public UnitOfWork(DataBaseContext ctx, GenericRepository<Order> or)
+    public UnitOfWork(DataBaseContext ctx)
     {
         _ctx = ctx;
     }

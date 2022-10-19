@@ -17,7 +17,7 @@ public interface IGenericReposotory<T> where T : class
     
     Task CreateRange(IEnumerable<T> entities);
 
-    void Update(int id, T entity);
+    Task Update(T entity);
 
-    void Delete(int id);
+    Task Delete(int id);
 }

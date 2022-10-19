@@ -1,7 +1,6 @@
 namespace Domain.DTO_s;
 
 using System.ComponentModel.DataAnnotations;
-using Entities.MainEntities;
 
 public class RegisterDTO
 {

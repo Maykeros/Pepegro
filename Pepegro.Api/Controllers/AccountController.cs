@@ -1,10 +1,11 @@
 namespace Pepegro.Api.Controllers;
 
 using Domain.DTO_s;
+using Infrastructure.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 using Services.Services.Authentication;
 
-[Controller]
+[ApiController]
 [Route("api/[controller]")]
 public class AccountController : ControllerBase
 {

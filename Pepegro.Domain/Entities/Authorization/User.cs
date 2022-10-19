@@ -1,6 +1,5 @@
 namespace Domain.Entities.Authorization;
 
-using System.ComponentModel.DataAnnotations;
 using MainEntities;
 using Microsoft.AspNetCore.Identity;
 
