@@ -27,9 +27,9 @@ public class OrderService : IOrderService
     {
         Log.Logger.Information($"Try to get all orders of user by id:{userId}");
 
-        var result = await _userManager.FindByIdAsync(userId.ToString());
+        var user = await _userManager.FindByIdAsync(userId.ToString());
         
-        if (result == null)
+        if (user == null)
         {
             throw new Exception("User doesn't exists");
         }
@@ -46,6 +46,11 @@ public class OrderService : IOrderService
 
         var order = await _unitOfWork.Orders.Get(o => o.Id == id);
 
+        if (order == null)
+        {
+            throw new Exception("Bad request");
+        }
+        
         return _mapper.Map<GetOrderDto>(order);
     }
 

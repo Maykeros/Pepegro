@@ -5,7 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 public interface IAccountService
 {
-    public Task<IActionResult> Register(RegisterDTO registerDto);
+    public Task<IActionResult> RegisterAndSendConfirmationToken(RegisterDTO registerDto);
+
+    public Task<IActionResult> ConfirmRegistration(int userId, string token);
 
     public Task<string> Login(LoginDTO loginDTO);
 }

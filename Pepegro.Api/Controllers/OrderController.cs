@@ -2,10 +2,12 @@ namespace Pepegro.Api.Controllers;
 
 using Bll.Services.MainServices;
 using Domain.DTO_s.MainEntities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/[Controller]")]
+[Authorize]
 public class OrderController : ControllerBase
 {
     private readonly IOrderService _orderService;

@@ -17,13 +17,25 @@ public class AccountController : ControllerBase
     }
     
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] RegisterDTO registerDto)
+    public async Task<IActionResult> RegisterAndSendConfirmationToken([FromBody] RegisterDTO registerDto)
     {
         if (!ModelState.IsValid)
         {
             return BadRequest("Something goes wrong");
         }
-        await _accountService.Register(registerDto);
+        await _accountService.RegisterAndSendConfirmationToken(registerDto);
+        return Ok();
+
+    }
+    
+    [HttpPost("confirm-register")]
+    public async Task<IActionResult> ConfirmRegistration([FromQuery] int Id, [FromQuery] string token)
+    {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest("Something goes wrong");
+        }
+        await _accountService.ConfirmRegistration(Id,token);
         return Ok();
 
     }

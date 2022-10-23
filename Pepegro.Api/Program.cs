@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Text;
 using Domain.DTO_s;
 using Domain.Entities.Authorization;
+using Domain.Entities.MailServiceEntities;
 using Domain.Entities.MainEntities;
 using Infrastructure;
 using Infrastructure.Abstractions;
@@ -16,6 +17,7 @@ using Microsoft.IdentityModel.Tokens;
 using Pepegro.Api.Extensions;
 using Pepegro.Api.Middlewares;
 using Pepegro.Bll.Services.MainServices;
+using Pepegro.Bll.Services.MainServices.MailService;
 using Serilog;
 using Serilog.Core;
 using Serilog.Events;
@@ -29,7 +31,6 @@ Log.Logger = new LoggerConfiguration()
         restrictedToMinimumLevel: LogEventLevel.Information)
     .CreateBootstrapLogger();
 
-
 try
 {
     var builder = WebApplication.CreateBuilder(args);
@@ -38,32 +39,30 @@ try
 
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
-    builder.Services.AddSwaggerGen();
+    builder.Services.AddSwaggerGenWithJWT();
 
-    builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
-    builder.Services.AddScoped<IOrderService, OrderService>();
-    builder.Services.AddScoped<IProductService, ProductService>();
-    
+    builder.Services.AddTransient<IUnitOfWork, UnitOfWork>()
+        .AddScoped<IOrderService, OrderService>()
+        .AddScoped<IProductService, ProductService>()
+        .AddTransient<IMailService, MailService>()
+        .AddScoped<IAccountService, AccountService>()
+        .AddJwtTokenGenerator(builder.Configuration)
+        .AddJwtBearerOptions(builder.Configuration)
+        .AddTransient<GlobalExceptionHandlingMiddleware>()
+        .Configure<MailCredentials>(builder.Configuration.GetSection("MailCredentials"));
     
     builder.Services.AddDbContext<DataBaseContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-    
-    builder.Services
-        .AddJwtTokenGenerator(builder.Configuration)
-        .AddJwtBearerOptions(builder.Configuration);
-    builder.Services.AddScoped<IAccountService, AccountService>();
     
     builder.Services
         .AddIdentity<User, Role>(options => options.PasswordSettings())
         .AddUserManager<UserManager<User>>()
         .AddEntityFrameworkStores<DataBaseContext>()
         .AddDefaultTokenProviders();
-    
 
     builder.Services.AddAutoMapper(typeof(Program));
-
     
-    builder.Services.AddTransient<GlobalExceptionHandlingMiddleware>();
+    
     var app = builder.Build();
 
     if (app.Environment.IsDevelopment())
