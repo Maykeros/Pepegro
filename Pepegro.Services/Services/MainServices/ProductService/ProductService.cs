@@ -5,23 +5,22 @@ using Domain.DTO_s.MainEntities;
 using Domain.Entities.MainEntities;
 using Infrastructure.Abstractions;
 using Microsoft.Extensions.Logging;
+using Serilog;
 
 public class ProductService : IProductService
 {
     private readonly IUnitOfWork _unitOfWork;
-    private readonly ILogger<ProductService> _logger;
     private readonly IMapper _mapper;
 
-    public ProductService(IUnitOfWork unitOfWork, ILogger<ProductService> logger, IMapper mapper)
+    public ProductService(IUnitOfWork unitOfWork, IMapper mapper)
     {
         _unitOfWork = unitOfWork;
-        _logger = logger;
         _mapper = mapper;
     }
 
     public async Task<List<GetProductDto>> GetPageOfProducts(int numberOfPage, int pageCount)
     {
-        _logger.LogInformation($"Try to get page of products, number: {numberOfPage}");
+        Log.Logger.Information("try to get product");
 
         var products = await _unitOfWork.Products.GetAll();
 
@@ -32,7 +31,7 @@ public class ProductService : IProductService
 
     public async Task<GetProductDto> GetProductById(int id)
     {
-        _logger.LogInformation($"Try to get product");
+        Log.Logger.Information("try to get product");
 
         var products = await _unitOfWork.Products.Get(p => p.Id == id);
 
@@ -41,7 +40,7 @@ public class ProductService : IProductService
 
     public async Task<int> CreateProduct(CreateProductDTO createProductDto)
     {
-        _logger.LogInformation("Try to create product");
+        Log.Logger.Information("Try to create product");
 
         var product = _mapper.Map<Product>(createProductDto);
 
@@ -52,7 +51,7 @@ public class ProductService : IProductService
 
     public async Task<int> UpdateProduct(int id, UpdateProductDTO updateProductDto)
     {
-        _logger.LogInformation("Try to update hotel");
+        Log.Logger.Information("Try to update hotel");
 
         var product = await _unitOfWork.Products.Get(p => p.Id == id);
 
@@ -65,14 +64,14 @@ public class ProductService : IProductService
 
     public async Task DeleteProduct(int id)
     {
-        _logger.LogInformation("Try to delete hotel");
+        Log.Logger.Information("Try to delete hotel");
 
         var product = _unitOfWork.Products.Get(p => p.Id == id);
         if (product == null)
         {
-            _logger.LogError("Product is no found, Invalid delete operation");
+            Log.Logger.Error("Product is no found, Invalid delete operation");
         }
-        
+
         await _unitOfWork.Products.Delete(id);
     }
 }

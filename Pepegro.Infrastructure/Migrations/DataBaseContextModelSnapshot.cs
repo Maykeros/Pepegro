@@ -55,21 +55,21 @@ namespace Infrastructure.Migrations
                         new
                         {
                             Id = 2,
-                            ConcurrencyStamp = "b94ac46a-044e-4289-90c1-a4de2230405b",
+                            ConcurrencyStamp = "42df4e4a-b38c-4181-a81f-bd61bff96e1e",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
                             Id = 1,
-                            ConcurrencyStamp = "b778fa54-4637-47fa-a22f-77ae1964efaf",
+                            ConcurrencyStamp = "7415e8f1-ea0a-4500-91b1-028833b27787",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
                             Id = 3,
-                            ConcurrencyStamp = "533e61b8-866f-4dca-966b-ddc6a3e03b0b",
+                            ConcurrencyStamp = "07991300-a9bf-4888-b819-1279ba5a460b",
                             Name = "Seller",
                             NormalizedName = "SELLER"
                         });
@@ -153,16 +153,21 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.MainEntities.Order", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
 
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
+                    b.HasKey("Id");
 
-                    b.HasKey("ProductId", "UserId");
+                    b.HasIndex("ProductId");
 
                     b.HasIndex("UserId");
 
@@ -302,13 +307,11 @@ namespace Infrastructure.Migrations
                     b.HasOne("Domain.Entities.MainEntities.Product", "Product")
                         .WithMany("Orders")
                         .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Domain.Entities.Authorization.User", "User")
                         .WithMany("Orders")
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Product");

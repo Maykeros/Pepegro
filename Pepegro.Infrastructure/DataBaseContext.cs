@@ -21,16 +21,18 @@ public class DataBaseContext : IdentityDbContext<User, Role, int>
             
         
         base.OnModelCreating(builder);
-        builder.Entity<Order>().HasKey(o => new {o.ProductId, o.UserId});
-        
+        builder.Entity<Order>().HasKey(O => O.Id);
+
         builder.Entity<Order>()
             .HasOne(o => o.Product)
             .WithMany(p => p.Orders)
-            .HasForeignKey(o => o.ProductId);
-        
+            .HasForeignKey(o => o.ProductId)
+            .OnDelete(DeleteBehavior.ClientSetNull);
+
         builder.Entity<Order>()
             .HasOne(o => o.User)
             .WithMany(u => u.Orders)
-            .HasForeignKey(o => o.UserId);
+            .HasForeignKey(o => o.UserId)
+            .OnDelete(DeleteBehavior.ClientSetNull);
     }
 }

@@ -44,7 +44,9 @@ public class GenericRepository<T> : IGenericReposotory<T> where T : class
             query = orderBy(query);
         }
 
-        return await query.AsNoTracking().ToListAsync();
+        var result = await query.AsNoTracking().ToListAsync();
+
+        return result;
     }
 
     public async Task<T> Get(Expression<Func<T, bool>>? expression = null, List<string>? includes = null)

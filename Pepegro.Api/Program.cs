@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 using Domain.DTO_s;
 using Domain.Entities.Authorization;
@@ -13,6 +14,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Pepegro.Api.Extensions;
+using Pepegro.Api.Middlewares;
 using Pepegro.Bll.Services.MainServices;
 using Serilog;
 using Serilog.Core;
@@ -37,8 +39,11 @@ try
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
-    
+
     builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+    builder.Services.AddScoped<IOrderService, OrderService>();
+    builder.Services.AddScoped<IProductService, ProductService>();
+    
     
     builder.Services.AddDbContext<DataBaseContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -57,6 +62,8 @@ try
 
     builder.Services.AddAutoMapper(typeof(Program));
 
+    
+    builder.Services.AddTransient<GlobalExceptionHandlingMiddleware>();
     var app = builder.Build();
 
     if (app.Environment.IsDevelopment())
@@ -64,9 +71,11 @@ try
         app.UseSwagger();
         app.UseSwaggerUI();
     }
+
+    app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
     
     app.UseHttpsRedirection();
-    
+
     app.UseAuthentication();
     app.UseAuthorization();
 
@@ -76,7 +85,7 @@ try
 }
 catch (Exception ex)
 {
-    Log.Fatal(ex, "Unhandled Exeption");
+    Log.Fatal(ex, "Unhandled Exception");
 }
 finally
 {
